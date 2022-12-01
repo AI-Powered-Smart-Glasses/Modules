@@ -3,7 +3,7 @@
 
 ## Mentor: Dr. Sujata Singla
 
-![photo_2022-03-26_03-15-10](https://user-images.githubusercontent.com/73690811/160207334-b364c377-c9cf-4186-84c6-8de8132e0629.jpg)
+![Objective](https://user-images.githubusercontent.com/69632807/205109973-11a96fb7-8e07-43bf-987c-324abea2cf88.jpg)
 
 # Solution:
 AI-based spectacles that will tell blind people about their surroundings in real-time.
@@ -19,7 +19,7 @@ AI-based spectacles that will tell blind people about their surroundings in real
 ![stack](https://user-images.githubusercontent.com/66416000/173223495-d10d0348-70e8-49b9-8b58-1cb177d3bc6b.png)
 
 # Working:
-![Methodology](https://user-images.githubusercontent.com/73690811/160275683-16184713-08c2-4a5c-b63b-46d872144097.png)
+![Working](https://user-images.githubusercontent.com/69632807/205111413-65a10ddf-b093-4250-b7e5-9426447d6eae.png)
 
 # Modules:
 ### <b>A)</b> Module 1 (Voice Module) - 
