@@ -1,0 +1,271 @@
+
+     {% extends 'layout.html' %}
+
+     {% block body %} 
+
+     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        </symbol>
+        <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+        </symbol>
+        <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </symbol>
+      </svg>
+    
+   
+        <section id="about" class="core-value py-5">
+          <div class="container py-md-4">
+            {% if message_sent == True %}
+            <div id="alert" class="alert alert-success d-flex align-items-center" role="alert">
+                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                <div>
+                    &nbsp;Message sent successfully.
+                </div>
+              </div>
+              {% endif %}
+      
+              <script type="text/javascript">
+                setTimeout(function () {
+                    $('#alert').alert('close');
+                }, 5000);
+            </script>
+      
+            <h1 class="heading mb-sm-5 mb-4 text-center"> ABOUT US</h1>
+            <div class="row core-grids">
+              <div class="col-lg-6 core-left">
+                <img class="img-fluid" src="../static/assets/img/home.png" alt="" />
+              </div>
+              <div class="col-lg-6 core-right">
+                <h3 class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, distinctio.</h3>
+                <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores ipsa maiores ut officiis sint tempora necessitatibus voluptas, qui eos hic laborum corporis quisquam cum, animi odio beatae rerum ab recusandae repudiandae voluptatibus accusamus optio. Iure asperiores laudantium perferendis fugit ea.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- //core values -->
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">What we do</h2>
+                    <h3 class="section-subheading text-muted">Our Services</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="../static/../static/assets/img/home.png" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Face Recognition</div>
+                                <div class="portfolio-caption-subheading text-muted">Predicting the person</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="../static/../static/assets/img/home.png" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Currency Note Detection</div>
+                                <div class="portfolio-caption-subheading text-muted">Detecting the currency for blind people</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="../static/../static/assets/img/home.png" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Image Captioning</div>
+                                <div class="portfolio-caption-subheading text-muted">Giving captions to live Image</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                   
+                </div>
+            </div>
+
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="../static/../static/assets/img/home.png" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Traffic Lights detector</div>
+                                <div class="portfolio-caption-subheading text-muted">Giving captions to live Image</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                   
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+
+
+
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">Have a Query?? Drop us a message.</h3>
+                </div>
+
+
+                <form name="sentMessage" id="contactForm" action="/" method="post" >
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" name= "name" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" name="email" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control" name="phone" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" name="message" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-warning btn-xl text-uppercase" id="submitButton" type="submit">Send Message</button></div>
+                </form>
+
+
+            </div>
+        </section>
+       
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="../static/assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Face Recognition</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, quisquam accusantium. Porro quas eligendi placeat.</p>
+                                    <img class="img-fluid d-block mx-auto" src="../static/assets/img/home.png" alt="..." />
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro numquam odio explicabo iusto voluptate voluptatem doloremque alias. Molestiae laboriosam, ipsam dolorem tempora officia dicta error, quas placeat ea assumenda sequi libero optio! Quia illo, sit earum quod totam reiciendis perferendis quos quidem, dicta natus culpa est quo iure reprehenderit perspiciatis odio adipisci minima non.</p>
+                                    <ul class="list-inline">
+                                      <a href="/crop" class="btn btn-warning btn-lg" role="button" aria-pressed="true">Start Recognizing</a>
+                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="../static/assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Currency Note Detection</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam nisi pariatur quidem amet. Quam, deserunt.
+                                    </p>
+                                    <img class="img-fluid d-block mx-auto" src="../static/assets/img/home.png" alt="..." />
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad placeat autem quisquam voluptas eum, enim illum commodi dolore corporis nihil cum eos ipsam excepturi asperiores, molestias ea maiores aspernatur. Alias earum autem ea asperiores iure nam. Accusamus, quis pariatur. Ullam. </p>
+                                    <a href="/fertilizer" class="btn btn-warning btn-lg" role="button" aria-pressed="true">Start Detecting</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="../static/assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Image Captioning</h2>
+                                    <p class="item-intro text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium consequatur dignissimos assumenda aliquid, provident id tempora in culpa. Aliquid, repellendus!</p>
+                                    <img class="img-fluid d-block mx-auto" src="../static/assets/img/home.png"alt="..." />
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, sequi quis nisi quod non sint pariatur velit, temporibus commodi eligendi aperiam nihil earum odit itaque excepturi at. Nisi neque, eveniet omnis iusto accusamus excepturi quo reiciendis optio corporis mollitia quis possimus, corrupti laboriosam ut, vel molestias dolore explicabo nam animi ad ipsam eius cum. Error dolorem culpa ducimus ad hic.</p>
+                                    <a href="/disease" class="btn btn-warning btn-lg" role="button" aria-pressed="true">Start Predicting</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="../static/assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Traffic Lights Detection</h2>
+                                    <p class="item-intro text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium consequatur dignissimos assumenda aliquid, provident id tempora in culpa. Aliquid, repellendus!</p>
+                                    <img class="img-fluid d-block mx-auto" src="../static/assets/img/home.png"alt="..." />
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, sequi quis nisi quod non sint pariatur velit, temporibus commodi eligendi aperiam nihil earum odit itaque excepturi at. Nisi neque, eveniet omnis iusto accusamus excepturi quo reiciendis optio corporis mollitia quis possimus, corrupti laboriosam ut, vel molestias dolore explicabo nam animi ad ipsam eius cum. Error dolorem culpa ducimus ad hic.</p>
+                                    <a href="/disease" class="btn btn-warning btn-lg" role="button" aria-pressed="true">Start Predicting</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+
+        {% endblock %}

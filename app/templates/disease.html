@@ -1,0 +1,203 @@
+{% extends 'layout.html' %}
+{% block body %} 
+
+
+<section class="page-section" id="crop">
+   
+    <div class="container" >
+        {% if ok == "True" %}
+        <div class="alert alert-dark alert-dismissible fade show" role="alert">
+          {{prediction}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+        </div>
+          <br>
+          <div class="d-flex justify-content-center">
+            <a  style="
+            color: black;
+            font-weight: bold;
+            border-radius: 12px;
+            font-size: 21px;"
+           href="/disease" class="btn btn-warning btn-lg" role="button" aria-pressed="true">Try for another Entry</a>
+    
+          {% elif ok == "False" %}
+
+          <div class="alert alert-dark alert-dismissible fade show" role="alert">
+           <h2>Please Upload the Image! Image box can't be Empty</h2>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+          </div>
+            <br>
+
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Please Upload the image of your infected crop</h2>
+        </div>
+        <br>
+        <div>
+           
+        <form action="/disease" class="form-signin" method=post enctype=multipart/form-data>
+            <div class="d-flex justify-content-center">
+            <div>
+            <input  type="file" name="file" class="form-control-file " id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">    
+            </div>
+            </div>
+            <br> <br>
+            <style>
+                #output-image
+                {
+                    width: 100%;
+                    height: auto;
+                }
+            </style>
+            <img  id="output-image" class="rounded mx-auto d-block" />
+            <br> <br>
+            <div>
+                <div class="d-flex justify-content-center">
+                <button
+                    type="submit"
+                    class="btn btn-warning btn-lg"
+                    style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;"
+                >
+                    Predict
+                </button>
+                </div>
+             </div>
+            
+   
+          </form>
+          </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+          function preview_image(event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+              var output = document.getElementById('output-image')
+              output.src = reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+          }
+        </script>
+
+        {% elif ok == "Error" %}
+
+        <div class="alert alert-dark alert-dismissible fade show" role="alert">
+        <h2>Please Upload the Image with correct dimensions (1:1).</h2>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+        </div>
+          <br>
+
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase">Please Upload the image of your infected crop</h2>
+        </div>
+        <br>
+        <div>
+        
+        <form action="/disease" class="form-signin" method=post enctype=multipart/form-data>
+          <div class="d-flex justify-content-center">
+          <div>
+          <input  type="file" name="file" class="form-control-file " id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">    
+          </div>
+          </div>
+          <br> <br>
+          <style>
+              #output-image
+              {
+                  width: 100%;
+                  height: auto;
+              }
+          </style>
+          <img  id="output-image" class="rounded mx-auto d-block" />
+          <br> <br>
+          <div>
+              <div class="d-flex justify-content-center">
+              <button
+                  type="submit"
+                  class="btn btn-warning btn-lg"
+                  style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;"
+              >
+                  Predict
+              </button>
+              </div>
+          </div>
+          
+
+        </form>
+        </div>
+        </div>
+        </div>
+        <script type="text/javascript">
+        function preview_image(event) {
+          var reader = new FileReader();
+          reader.onload = function () {
+            var output = document.getElementById('output-image')
+            output.src = reader.result;
+          }
+          reader.readAsDataURL(event.target.files[0]);
+        }
+        </script>
+
+<br>
+
+        {% else %}
+        
+
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Please Upload the image of your infected crop</h2>
+        </div>
+        <br>
+        <div>
+           
+        <form action="/disease" class="form-signin" method=post enctype=multipart/form-data>
+            <div class="d-flex justify-content-center">
+            <div>
+            <input  type="file" name="file" class="form-control-file " id="inputfile" onchange="preview_image(event)" style="font-weight: bold;">    
+            </div>
+            </div>
+            <br> <br>
+            <style>
+                #output-image
+                {
+                    width: 100%;
+                    height: auto;
+                }
+            </style>
+            <img  id="output-image" class="rounded mx-auto d-block" />
+            <br> <br>
+            <div>
+                <div class="d-flex justify-content-center">
+                <button
+                    type="submit"
+                    class="btn btn-warning btn-lg"
+                    style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;"
+                >
+                    Predict
+                </button>
+                </div>
+             </div>
+            
+   
+          </form>
+          </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+          function preview_image(event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+              var output = document.getElementById('output-image')
+              output.src = reader.result;
+            }
+            reader.readAsDataURL(event.target.files[0]);
+          }
+        </script>
+          {% endif %}
+
+ 
+        </div>
+</section>        
+{% endblock %}
