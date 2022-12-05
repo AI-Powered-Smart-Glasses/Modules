@@ -13,7 +13,6 @@ from PIL import Image
 from utils.model import ResNet9
 from utils.disease_classes import disease_classes
 from flask_mail import Mail
-# hi
 # -------------------------LOADING THE TRAINED MODELS -----------------------------------------------
 
 # Loading plant disease classification model
