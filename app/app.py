@@ -11,6 +11,7 @@ import torch
 from torchvision import transforms
 from PIL import Image
 from utils.model import ResNet9
+#c:/Users/Hp/Desktop/capstone/Modules/venv/Scripts/activate.bat
 from utils.disease_classes import disease_classes
 from flask_mail import Mail
 # CPG 165
